@@ -103,6 +103,11 @@ nav div div {
 nav div div svg {
   width: 14px;
   rotate: 135deg;
+  transition: rotate 100ms;
+}
+
+nav div a:hover svg {
+  rotate: 180deg;
 }
 
 nav div > a span {
@@ -110,4 +115,19 @@ nav div > a span {
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 999999vw;
+}
+.cursor {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  pointer-events: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
