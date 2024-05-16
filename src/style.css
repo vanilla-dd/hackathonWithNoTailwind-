@@ -225,3 +225,25 @@ nav div > a span {
   left: 50px;
   font-size: 100px;
 }
+
+.section2 {
+  text-align: center;
+  margin-block: 10rem;
+  padding: 0rem 2rem;
+  height: 10rem;
+}
+
+.section2 > p {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.section2 p > span {
+  border: 1px solid black;
+  border-radius: 10000vw;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
