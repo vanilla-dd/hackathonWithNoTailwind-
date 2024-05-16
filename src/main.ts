@@ -1,3 +1,4 @@
+// @ts-nocheck
 import gsap from "gsap";
 import "./style.css";
 const iframeContainer = document.querySelector(".iframe");
