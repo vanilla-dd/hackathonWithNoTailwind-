@@ -208,3 +208,20 @@ nav div > a span {
   width: 100px;
   height: 100%;
 }
+
+#countdown {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999999;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+}
+
+#countdown > p {
+  position: fixed;
+  bottom: 5%;
+  left: 50px;
+  font-size: 100px;
+}

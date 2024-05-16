@@ -1,6 +1,24 @@
 import gsap from "gsap";
 import "./style.css";
+const iframeContainer = document.querySelector(".iframe");
+const iframe = document.querySelector("iframe");
+let count = 0;
+let intervalId: number;
+
 document.addEventListener("DOMContentLoaded", function () {
+  const countdownElement = document.getElementById("countdown");
+  const p = document.createElement("p");
+  countdownElement?.append(p);
+  intervalId = setInterval(function () {
+    if (count < 100) {
+      p.textContent = `${count}%`;
+      count++;
+    } else {
+      clearInterval(intervalId);
+
+      countdownElement.style.display = "none";
+    }
+  }, 10); // update every 0.1 seconds // update every 1 second
   const cursor = document.querySelector(".cursor");
   let mouseX = 0;
   let mouseY = 0;
@@ -43,3 +61,18 @@ gsap.to(tween, {
 });
 
 currentScroll = window.pageYOffset;
+let fullScreen = false;
+iframeContainer?.addEventListener("click", () => {
+  if (!iframe) return;
+  if (fullScreen) {
+    document.exitFullscreen();
+    fullScreen = false;
+    return;
+  }
+  makeFullScreen();
+});
+
+const makeFullScreen = () => {
+  iframe?.requestFullscreen();
+  fullScreen = true;
+};
