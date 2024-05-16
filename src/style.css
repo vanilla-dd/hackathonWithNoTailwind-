@@ -131,3 +131,80 @@ nav div > a span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* section 1 */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.section1 {
+  display: flex;
+  flex: 1;
+}
+
+.text {
+  align-self: flex-end;
+  padding: 10px 90px;
+}
+
+.text button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+.text svg {
+  width: 12px;
+}
+
+.iframe {
+  position: relative;
+}
+.iframe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.iframe iframe {
+  display: block;
+  aspect-ratio: 16/9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay {
+  position: absolute;
+  background: rgb(0, 0, 0, 0.7);
+  inset: 0;
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  mix-blend-mode: hard-light;
+}
+.marquee__inner {
+  display: flex;
+  gap: 45rem;
+}
+.marquee__part {
+  font-size: 150px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  width: 100dvw;
+}
+.marquee__part svg {
+  width: 100px;
+  height: 100%;
+}
